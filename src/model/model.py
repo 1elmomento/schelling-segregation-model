@@ -105,7 +105,7 @@ class Model:
             interval=500,
         )
 
-        animation.save("schelling_model.mp4", writer="ffmpeg", fps=50)
+        animation.save("plots/schelling_model.mp4", writer="ffmpeg", fps=50)
 
     def schelling_segregation_stabilizer(self):
         pass
