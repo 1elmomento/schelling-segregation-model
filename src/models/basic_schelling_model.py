@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 
-class Model:
+class BasicSchellingModel:
     def __init__(self) -> None:
         self.grid_size = 20
         self.num_agents = 100
@@ -53,7 +53,7 @@ class Model:
                             grid[new_pos[0], new_pos[1]] = grid[x, y]
                             grid[x, y] = None
 
-    def update(self, grid, img, texts):
+    def update(self, frame, grid, img, texts):
         self.move_agents(grid)
         data = np.ones((self.grid_size, self.grid_size, 3)) * 0.9
 
@@ -106,9 +106,6 @@ class Model:
         )
 
         animation.save("plots/schelling_model.mp4", writer="ffmpeg", fps=50)
-
-    def schelling_segregation_stabilizer(self):
-        pass
 
     def run(self):
         self.run_animation()
