@@ -17,8 +17,18 @@ At the end, I will also explore some methods of preventing segregation, such as 
 
 In this method, I used a grid of size of 20, here the neighbors were two types and intially randomly placed in the grid. The threshold for moving of each agent in the grid is 0.4, meaning, when number of neighbors of different type exceeds this threshold then, the agent will move to other places with neighborhood satisfaction below 0.4. As you can see in the animation, the perfect segregation pattern emerges after 500 iterations. Each type had 50 agents in the grid and the total number of agents are 100.
 
-<div>
-    <video controls>
-        <source src="src/plots/schelling_model.mp4" type="video/mp4">
-    </video>
-</div>
+![Basic Schelling Model](src/plots/schelling_model.gif)
+
+## Schelling Segregation Model with Stabilizer Agents
+
+I introduced a new type of agents to the neighborhood, called stabilizer agents. There are the agents that both our initial types are satisfied when they are neighbors. As you can see in the animation below, even introducing small number of stabilizer agents to the neighbors, can prevent the perfect segregation as seen before. When agents of each type are neighbors with stabilizer agents, since the threshold for moving is not met, agents decided to not to move, resulting a diverse neighborhood. 
+
+![Schelling Model with stabilizer Agents](src/plots/schelling_model_stabilizers.gif)
+
+## Schelling Segregation Model with cost of moving
+
+I also explored a case, in which movements of agents have costs. In this first I used Manhatan Distance as our metric, and then introduced a cost threshold for moving. This method incorporates both Stabilizer agents and moving cost in a grid with Manhatan Distance as its metric. The result was not what I expected and here more work should be done. 
+
+As you can see in the animation, some agents gets replaced by moving agents which is not quite correct. Anyways in the future I will explore this case in a better way.
+
+![Schelling Model with cost for moving](src/plots/schelling_model_moving_cost.gif)
