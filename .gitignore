@@ -1,4 +1,5 @@
 env/
 src/config.ini
 src/resources
-Notes/
+Notes/*
+!Notes/schelling_segregation_model.tex
