@@ -17,4 +17,8 @@ At the end, I will also explore some methods of preventing segregation, such as 
 
 In this method, I used a grid of size of 20, here the neighbors were two types and intially randomly placed in the grid. The threshold for moving of each agent in the grid is 0.4, meaning, when number of neighbors of different type exceeds this threshold then, the agent will move to other places with neighborhood satisfaction below 0.4. As you can see in the animation, the perfect segregation pattern emerges after 500 iterations. Each type had 50 agents in the grid and the total number of agents are 100.
 
-[Badic Segregation Model of Schelling](plots/schelling_model.mp4)
+<div>
+    <video controls>
+        <source src="src/plots/schelling_model.mp4" type="video/mp4">
+    </video>
+</div>
